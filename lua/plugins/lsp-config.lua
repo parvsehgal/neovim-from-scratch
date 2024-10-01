@@ -20,7 +20,6 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      
       -- Format on save
       local function on_attach(client, bufnr)
         if client.server_capabilities.documentFormattingProvider then

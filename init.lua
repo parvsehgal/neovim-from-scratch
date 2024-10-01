@@ -18,7 +18,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-
 vim.opt.swapfile = false
 vim.wo.relativenumber = true
 
@@ -34,10 +33,13 @@ vim.api.nvim_set_keymap('n','<S-h>',':bprevious<CR>' ,{noremap=true,silent=true}
 -- to close a file buffer
   -- not ideal want to fix in the future
 vim.api.nvim_set_keymap('n', '<leader>bd', ':b# | bd #<CR>', { noremap = true, silent = true })
---command to resize neotree buffer
+--command to resize buffers
 vim.api.nvim_set_keymap('n','<C-right>',':vertical resize +2<CR>',{ noremap = true, silent = true })
 vim.api.nvim_set_keymap('n','<C-left>',':vertical resize -2<CR>',{ noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>', { noremap = true, silent = true })
 vim.opt.clipboard = "unnamedplus"
+-- to have persistent undo
+vim.opt.undofile = true       -- Turn on persistent undo
+vim.opt.undodir = vim.fn.stdpath('config') .. '/undo'  -- Set the undo directory

@@ -11,7 +11,7 @@ return {
         lualine_c = { 'filetype', 'progress' },
         lualine_x = { 'location' },
         lualine_y = {},
-        lualine_z = { 'os.date("%H:%M")' }
+        lualine_z = { 'os.date("%I:%M %p")' }
       },
     })
   end

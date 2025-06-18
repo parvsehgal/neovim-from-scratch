@@ -43,3 +43,10 @@ vim.opt.clipboard = "unnamedplus"
 -- to have persistent undo
 vim.opt.undofile = true       -- Turn on persistent undo
 vim.opt.undodir = vim.fn.stdpath('config') .. '/undo'  -- Set the undo directory
+--fold settings
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99 -- Open all folds by default
+vim.opt.foldminlines = 1    -- Ensures even small indents fold
+

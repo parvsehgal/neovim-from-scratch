@@ -16,7 +16,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
+vim.opt.termguicolors = true
 require("lazy").setup("plugins")
 vim.opt.swapfile = false
 vim.wo.relativenumber = true
@@ -34,8 +34,8 @@ vim.api.nvim_set_keymap('n','<S-h>',':bprevious<CR>' ,{noremap=true,silent=true}
   -- not ideal want to fix in the future
 vim.api.nvim_set_keymap('n', '<leader>bd', ':b# | bd #<CR>', { noremap = true, silent = true })
 --command to resize buffers
-vim.api.nvim_set_keymap('n','<C-right>',':vertical resize +2<CR>',{ noremap = true, silent = true })
-vim.api.nvim_set_keymap('n','<C-left>',':vertical resize -2<CR>',{ noremap = true, silent = true })
+vim.api.nvim_set_keymap('n','<M-right>',':vertical resize +2<CR>',{ noremap = true, silent = true })
+vim.api.nvim_set_keymap('n','<M-left>',':vertical resize -2<CR>',{ noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -2<CR>', { noremap = true, silent = true })
